@@ -17,6 +17,15 @@ const area = (l1, l2) => {
 /* EXERCISE 2
 Write a function "crazySum" which receives two given integers. If the two values are same, then returns triple their sum.
 */
+const crazySum = (int1, int2) => {
+  if (typeof int1 === "number" && typeof int2 === "number") {
+    if (int1 === int2) {
+      return 3 * (int1 + int2);
+    }
+  }
+};
+
+//console.log(crazySum(3, 3));
 
 /* EXERCISE 3
 Write a function "crazyDiff" that computes the 
