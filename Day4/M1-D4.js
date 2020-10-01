@@ -119,6 +119,10 @@ const upperFirst = (str) => {
 Write a function "cutString" to create a new string without the first and last character of a given string.
 */
 
+const cutString = (str) => {
+  return str.slice(1, -1);
+};
+// console.log(cutString("hippopotamus"));
 /* WRITE YOUR CODE HERE */
 
 /* EXERCISE 10
