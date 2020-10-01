@@ -130,6 +130,15 @@ Write a function "giveMeRandom" which accepts a number n and returns an array co
 */
 
 /* WRITE YOUR CODE HERE */
+const giveMeRandom = (n) => {
+  const randomNumbers = [];
+  for (let i = 0; i < n; i++) {
+    randomNumbers.push(Math.floor(Math.random() * 10));
+  }
+  return randomNumbers;
+};
+
+//console.log(giveMeRandom(7));
 
 /* WHEN YOU ARE FINISHED
 Commit and push the code to your personal GitHub repository and share the link to your commit with your tutor.
