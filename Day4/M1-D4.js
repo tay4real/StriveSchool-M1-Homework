@@ -100,7 +100,6 @@ Write a function "reverseString" to reverse programmatically a given string (es.
 const reverseString = (str) => {
   return str.split("").reverse().join("");
 };
-
 // console.log(reverseString("Strive"));
 
 /* WRITE YOUR CODE HERE */
@@ -108,6 +107,11 @@ const reverseString = (str) => {
 /* EXERCISE 8
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as parameter
 */
+
+const upperFirst = (str) => {
+  return str.charAt(0).toUpperCase() + str.slice(1); // capitalize the first letter
+};
+//console.log(upperFirst("i am a striver"));
 
 /* WRITE YOUR CODE HERE */
 
