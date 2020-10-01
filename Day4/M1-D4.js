@@ -97,6 +97,12 @@ const check3and7 = (num) => {
 Write a function "reverseString" to reverse programmatically a given string (es.: Strive => evirtS).
 */
 
+const reverseString = (str) => {
+  return str.split("").reverse().join("");
+};
+
+// console.log(reverseString("Strive"));
+
 /* WRITE YOUR CODE HERE */
 
 /* EXERCISE 8
