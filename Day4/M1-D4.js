@@ -80,6 +80,17 @@ Write a function "check3and7" which accepts a positive number and check if it is
 HINT: Module Operator
 */
 
+const check3and7 = (num) => {
+  if (typeof num === "number" && num > 0) {
+    if (num % 3 || num % 7) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+};
+
+// console.log(check3and7(18));
 /* WRITE YOUR CODE HERE */
 
 /* EXERCISE 7
