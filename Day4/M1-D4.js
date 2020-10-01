@@ -64,6 +64,15 @@ const boundary = (N) => {
 Write a function "strivify" which accepts a string S. Add to S "Strive" in front of a given string, if the given string begins with "Strive" then return the original string.
 */
 
+const strivify = (S) => {
+  S = S.charAt(0).toUpperCase() + S.slice(1); // capitalize the first letter
+  if (S.startsWith("Strive", 0)) {
+    return S;
+  } else {
+    return "Strive " + S;
+  }
+};
+
 /* WRITE YOUR CODE HERE */
 
 /* EXERCISE 6
