@@ -73,7 +73,7 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
     <input type="button" value="Sort" onclick="bubblesort()" />
 
     <script>
-      /* EXERCISE 5: 
+      /* EXERCISE 5:
                 Add a new task to the list.
                 Suggestion:
                 - Use document.getElementById to get the UL item and the input text
@@ -88,32 +88,39 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
         taskList.appendChild(newListItem);
       };
 
-      /* EXERCISE 6: 
+      /* EXERCISE 6:
                 Create a method "removeLast" which removes the last item from the task list
             */
+      let removeLast = () => {
+        let taskLists = document.getElementById("myTaskList");
+        let listItems = document.querySelectorAll("#myTaskList li");
+        let lastListItemIndex = listItems.length - 1;
+        let lastItem = listItems[lastListItemIndex];
+        taskLists.removeChild(lastItem);
+      };
 
-      /* EXERCISE 7: 
+      /* EXERCISE 7:
                 Create a method "removeFirst" which removes the first item from the task list
             */
 
-      /* EXERCISE 8: 
+      /* EXERCISE 8:
                Create a method "getTasksAsArray" which returns (and print to the console) an array containing the tasks as string
             */
 
       /* EXERCISE 9:
-               Create a method "changeTaskBackgroundColor" which takes the color from the color picker with an 
+               Create a method "changeTaskBackgroundColor" which takes the color from the color picker with an
                onchange event listener ad applies it as background to every list item
             */
 
       /* EXTRA */
 
-      /* EXERCISE 10: 
+      /* EXERCISE 10:
                Create a method "bubbleSort()" which sort the task list alphabetically using the bubble sort algorithm
-            
+
                Use your spare time to beautify your task list with CSS.
 
                Suggestion:
-               - Break the code into many function for semplicity 
+               - Break the code into many function for semplicity
                - Reuse the functions previously created
             */
     </script>
