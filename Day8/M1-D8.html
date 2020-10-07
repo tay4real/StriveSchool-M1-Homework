@@ -116,6 +116,17 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
                Create a method "getTasksAsArray" which returns (and print to the console) an array containing the tasks as string
             */
 
+      const getTasksAsArray = () => {
+        let tasks = document.querySelectorAll("#myTaskList li");
+        let myTasks = [];
+        for (let i = 0; i < tasks.length; i++) {
+          myTasks.push(tasks[i].innerText);
+        }
+        return myTasks;
+      };
+
+      getTasksAsArray();
+
       /* EXERCISE 9:
                Create a method "changeTaskBackgroundColor" which takes the color from the color picker with an
                onchange event listener ad applies it as background to every list item
