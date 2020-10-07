@@ -17,13 +17,14 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
     -->
     <title>ToDo List</title>
     <style>
-      /* EXERCISE 2:  
-       Create a CSS class for the task list with a diverse background
-       Create a CSS class for the task list item with a border, a bold text and a bigger font size
-       Style every button of the page to be bigger
-    */
+      /* EXERCISE 2:
+         Create a CSS class for the task list with a diverse background
+         Create a CSS class for the task list item with a border, a bold text and a bigger font size
+         Style every button of the page to be bigger
+      */
       .tasklist {
-        background-color: dimgrey;
+        background-color: green;
+        padding: 5px 10px;
       }
       .tasklist-item {
         border: 1;
@@ -32,7 +33,7 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
       }
       input[type="button"] {
         font-size: 24px;
-        padding: 15px 32px;
+        padding: 5px 10px;
       }
     </style>
   </head>
@@ -56,7 +57,7 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
         Create a button "Remove First Task" to trigger the method "removeFirst"
         -->
     <input type="button" value="Remove First Task" onclick="removeFirst()" />
-    <ul id="myTaskList"></ul>
+    <ul class="tasklist" id="myTaskList"></ul>
 
     <hr />
 
@@ -79,6 +80,13 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
                 - Use the document.createElement to create the new List Item
                 - Append the child to the UL
             */
+      let addNewTask = () => {
+        let taskList = document.getElementById("myTaskList");
+        let newTask = document.getElementById("newTask");
+        let newListItem = document.createElement("li");
+        newListItem.innerText = newTask.value;
+        taskList.appendChild(newListItem);
+      };
 
       /* EXERCISE 6: 
                 Create a method "removeLast" which removes the last item from the task list
