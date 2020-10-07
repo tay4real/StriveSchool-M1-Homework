@@ -148,6 +148,25 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
                - Break the code into many function for semplicity
                - Reuse the functions previously created
             */
+      const bubblesort = () => {
+        let tasks = document.querySelectorAll("#myTaskList li");
+        let swap;
+        let n = tasks.length - 1;
+        let x = tasks;
+        do {
+          swap = false;
+          for (let i = 0; i < n; i++) {
+            if (x[i].innerText > x[i + 1].innerText) {
+              let temp = x[i].innerText;
+              x[i].innerText = x[i + 1].innerText;
+              x[i + 1].innerText = temp;
+              swap = true;
+            }
+          }
+          n--;
+        } while (swap);
+        return x;
+      };
     </script>
   </body>
 </html>
