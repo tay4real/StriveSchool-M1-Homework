@@ -18,7 +18,7 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
     <title>ToDo List</title>
     <style>
       /* EXERCISE 2:
-         Create a CSS class for the task list with a diverse background
+         Create a CSS class for the task list withWho a diverse background
          Create a CSS class for the task list item with a border, a bold text and a bigger font size
          Style every button of the page to be bigger
       */
@@ -80,7 +80,7 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
                 - Use the document.createElement to create the new List Item
                 - Append the child to the UL
             */
-      let addNewTask = () => {
+      const addNewTask = () => {
         let taskList = document.getElementById("myTaskList");
         let newTask = document.getElementById("newTask");
         let newListItem = document.createElement("li");
@@ -91,7 +91,7 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
       /* EXERCISE 6:
                 Create a method "removeLast" which removes the last item from the task list
             */
-      let removeLast = () => {
+      const removeLast = () => {
         let taskLists = document.getElementById("myTaskList");
         let listItems = document.querySelectorAll("#myTaskList li");
         let lastListItemIndex = listItems.length - 1;
@@ -104,7 +104,7 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
       /* EXERCISE 7:
                 Create a method "removeFirst" which removes the first item from the task list
             */
-      let removeFirst = () => {
+      const removeFirst = () => {
         let taskLists = document.getElementById("myTaskList");
         let listItems = document.querySelectorAll("#myTaskList li");
         let firstItem = listItems[0];
