@@ -96,13 +96,22 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
         let listItems = document.querySelectorAll("#myTaskList li");
         let lastListItemIndex = listItems.length - 1;
         let lastItem = listItems[lastListItemIndex];
-        taskLists.removeChild(lastItem);
+        if (lastItem) {
+          taskLists.removeChild(lastItem);
+        }
       };
 
       /* EXERCISE 7:
                 Create a method "removeFirst" which removes the first item from the task list
             */
-
+      let removeFirst = () => {
+        let taskLists = document.getElementById("myTaskList");
+        let listItems = document.querySelectorAll("#myTaskList li");
+        let firstItem = listItems[0];
+        if (firstItem) {
+          taskLists.removeChild(firstItem);
+        }
+      };
       /* EXERCISE 8:
                Create a method "getTasksAsArray" which returns (and print to the console) an array containing the tasks as string
             */
