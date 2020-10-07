@@ -125,12 +125,17 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
         return myTasks;
       };
 
-      getTasksAsArray();
-
       /* EXERCISE 9:
                Create a method "changeTaskBackgroundColor" which takes the color from the color picker with an
                onchange event listener ad applies it as background to every list item
             */
+      const changeTaskBackgroundColor = () => {
+        let colorInput = document.getElementById("colorPicker");
+        document.getElementById("myTaskList").style.backgroundColor =
+          colorInput.value;
+      };
+      let colorInput = document.getElementById("colorPicker");
+      colorInput.addEventListener("change", changeTaskBackgroundColor);
 
       /* EXTRA */
 
