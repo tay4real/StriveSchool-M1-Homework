@@ -110,9 +110,13 @@
       };
 
       let randomize = () => {
-        randomize(76);
+        let number = randomize(76);
         let cells = document.querySelectorAll("h3");
-        console.log(h3);
+        for (let i = 0; i < cells.length; i++) {
+          if (number === cells[i].innerText) {
+            cells[i].style.backgroundColor = white;
+          }
+        }
       };
     </script>
   </body>
