@@ -109,14 +109,37 @@
         return Math.floor(Math.random() * Math.floor(n));
       };
 
+      let memory = [];
       let randomize = () => {
-        let number = getRandomNum(76);
         let cells = document.querySelectorAll("h3");
-        for (let i = 0; i < cells.length; i++) {
-          if (number === parseInt(cells[i].innerText)) {
-            cells[i].style.backgroundColor = "#fff";
-            cells[i].style.color = "#000";
-            console.log(cells[i].innerText);
+        let number = getRandomNum(76);
+        if (memory.length === 0) {
+          memory.push(number);
+
+          for (let i = 0; i < cells.length; i++) {
+            if (number === parseInt(cells[i].innerText)) {
+              cells[i].style.backgroundColor = "#fff";
+              cells[i].style.color = "#000";
+              console.log(cells[i].innerText);
+              break;
+            }
+          }
+        } else {
+          const notthere = memory.filter((element) => element !== number);
+          console.log(`Not there: ${notthere}`);
+
+          for (let i = 0; i < memory.length; i++) {
+            if (number !== parseInt(memory[i])) {
+              for (let i = 0; i < cells.length; i++) {
+                if (number === parseInt(cells[i].innerText)) {
+                  cells[i].style.backgroundColor = "#fff";
+                  cells[i].style.color = "#000";
+                  memory.push(number);
+                  console.log(cells[i].innerText);
+                  break;
+                }
+              }
+            }
           }
         }
       };
