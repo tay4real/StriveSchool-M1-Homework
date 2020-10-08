@@ -110,11 +110,13 @@
       };
 
       let randomize = () => {
-        let number = randomize(76);
+        let number = getRandomNum(76);
         let cells = document.querySelectorAll("h3");
         for (let i = 0; i < cells.length; i++) {
-          if (number === cells[i].innerText) {
-            cells[i].style.backgroundColor = white;
+          if (number === parseInt(cells[i].innerText)) {
+            cells[i].style.backgroundColor = "#fff";
+            cells[i].style.color = "#000";
+            console.log(cells[i].innerText);
           }
         }
       };
