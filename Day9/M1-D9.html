@@ -4,7 +4,7 @@
         BINGO CHALLENGE!!!
         Create programmatically (with JS) a BINGO board with 76 cells, from 1 to 76.
         Create a button to randomize a number from 1 to 76. The same number should be highlighted on the bingo board
-
+        
         EXTRA: 
         - Take ALWAYS a new number (avoid randoming 10 3 times for example)
         - Create a USER BOARD with random 24 numbers that highlights as the main board does
@@ -19,24 +19,28 @@
         background-color: #f8f8f8;
         font-family: "Poppins", sans-serif;
         color: #1b1b1b;
-        max-width: 768px;
-        margin: 0 auto;
+        max-width: auto;
+        margin: 0 10%;
         font-size: 18px;
       }
       h1 {
         font-size: 64px;
-        margin-bottom: 0;
-        text-align: center;
+        margin-bottom: 20px;
+      }
+      #display {
+        display: flex;
       }
       #bingo-board {
-        background-color: #1b1b1b;
+        background-color: rgb(4, 47, 11);
         color: white;
-        width: 100%;
-        margin-bottom: 20px;
-        border: 6px solid #1b1b1b;
+        width: 70%;
+        margin: 20px;
+        border: 6px solid rgb(4, 47, 11);
         border-radius: 8px;
         margin: auto;
+        padding: 10px;
       }
+
       .bingo-cell {
         display: inline-block;
         width: 60px;
@@ -45,13 +49,35 @@
         border: 1px solid white;
         margin: 3px;
       }
+      #randomize-container {
+        display: flex;
+        width: 30%;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+      }
+      input[type="button"] {
+        font-size: 18px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 50px;
+        width: 200px;
+        background-color: rgb(4, 47, 11);
+        color: white;
+      }
     </style>
   </head>
   <body>
     <h1>Bingo board</h1>
-    <div id="bingo-board">
-      <!-- bingo board cells will be inserted here -->
+    <div id="display">
+      <div id="bingo-board">
+        <!-- bingo board cells will be inserted here -->
+      </div>
+      <div id="randomize-container">
+        <input type="button" value="Randomize" onclick="randomize()" />
+      </div>
     </div>
+
     <script>
       let boardCells = [];
       const initBoardCells = (n) => {
@@ -77,6 +103,16 @@
           child.appendChild(cell);
           bingoBoard.appendChild(child);
         }
+      };
+
+      let getRandomNum = (n) => {
+        return Math.floor(Math.random() * Math.floor(n));
+      };
+
+      let randomize = () => {
+        randomize(76);
+        let cells = document.querySelectorAll("h3");
+        console.log(h3);
       };
     </script>
   </body>
